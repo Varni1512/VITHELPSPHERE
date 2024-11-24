@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        header {
+            background-color: #0056a1;
+            padding: 10px;
+            text-align: center;
+        }
+        header img {
+            height: 80px;
+        }
+        .container {
+            width: 100%;
+            max-width: 400px;
+            margin: 100px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #0056a1;
+        }
+        .input-container {
+            position: relative;
+            margin-left: 2px;
+            margin-right: 20px;
+        }
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .input-container img {
+            position: absolute;
+            top: 50%;
+            right: 10px; /* Align icon to the right */
+            transform: translateY(-50%);
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+        }
+        .enter-button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 14px;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 10px;
+        }
+        .enter-button:hover {
+            background-color: #0056b3;
+        }
+        .links {
+            text-align: left;
+            margin-top: 10px;
+        }
+        .links a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .links a:hover {
+            text-decoration: underline;
+        }
+        .link {
+            text-align: right;
+            margin-top: 10px;
+        }
+        .link a {
+            color: #198754;
+            text-decoration: none;
+        }
+        .link a:hover {
+            text-decoration: underline;
+        }
+        footer {
+            background-color: #0056a1;
+            padding: 10px;
+            text-align: center;
+            color: white;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="VITLogoEmblem.png" alt="VIT Bhopal">
+</header>
+<div class="container">
+    <h2>HELPSPHERE Employee Login</h2>
+    <form action="#" method="POST">
+        <div class="input-container">
+            <input type="text" name="username" placeholder="Username" required>
+            <img src="username.png" alt="Username Icon">
+        </div>
+        <div class="input-container">
+            <input type="password" name="password" id="password" placeholder="Password" required>
+            <img src="close.png" alt="Password Icon" onclick="togglePassword()"> 
+        </div>
+        <a href="Employee.html" class="enter-button">login</a>
+    </form>
+    <div class="links">
+        <a href="#">Forgot Password</a><br><a href="#">Forgot LoginID</a><br>
+    </div>
+    <div class="link">
+        <a href="Home.html">Go to Home Page</a>
+    </div>
+</div>
+<footer>
+    Copyright © 2024 Software Development Cell, VIT, Bhopal-466 114.
+</footer>
+
+<script>
+    function togglePassword() {
+        var passwordField = document.getElementById("password");
+        var passwordIcon = document.querySelector('.input-container img[alt="Password Icon"]');
+        if (passwordField.type === "password") {
+            passwordField.type = "text";
+            passwordIcon.src = "show.png"; // Change icon to "hide"
+        } else {
+            passwordField.type = "password";
+            passwordIcon.src = "close.png"; // Change icon back to "show"
+        }
+    }
+
+    // Fake user data for testing purposes
+    const fakeUsers = [
+        { username: "23BAI10974", password: "Varni@1512" },
+    ];
+
+    // Add functionality to check fake users
+    document.querySelector('.enter-button').addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent form submission for demo
+        const usernameInput = document.querySelector('input[name="username"]').value;
+        const passwordInput = document.querySelector('input[name="password"]').value;
+
+        const user = fakeUsers.find(user => user.username === usernameInput && user.password === passwordInput);
+        
+        if (user) {
+            window.location.href = "Employee.html"; // Redirect to Student.html on success
+        } else {
+            alert('Invalid username or password.'); // Alert on failure
+        }
+    });
+</script>
+
+
+</body>
+</html>

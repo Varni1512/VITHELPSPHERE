@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VTOP - VIT Bhopal University</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        header {
+            background-color: #0056a1;
+            padding: 10px;
+            text-align: center;
+        }
+        header img {
+            height: 80px;
+        }
+        .container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .container h2 {
+            color: #0056a1;
+            font-weight: normal;
+        }
+        .button-grid {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .button {
+            border: 1px solid #ccc;
+            padding: 20px;
+            width: 200px;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: white;
+            position: relative;
+            transition: box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+        .button img {
+            width: 50px;
+            height: 50px;
+        }
+        .button:hover {
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+        .button h3 {
+            margin: 10px 0;
+        }
+        .enter-button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 14px;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 10px;
+        }
+        .enter-button:hover {
+            background-color: #0056b3;
+        }
+        .student { background-color: #e6f2ff; }
+        .employee { background-color: #fff7e6; }
+        .parent { background-color: #e6ffe6; }
+        .alumni { background-color: #e6f0ff; }
+        .university {
+            margin-top: 50px;
+            font-size: 18px;
+            color: #b30000;
+        }
+        footer {
+            background-color: #0056a1;
+            padding: 10px;
+            text-align: center;
+            color: white;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="VITLogoEmblem.png" alt="VIT Bhopal">
+</header>
+
+<div class="container">
+    <h2>Welcome to the VIT Bhopal HELPSPHERE Portal</h2>
+    <!-- <p>A digital initiative by the institute facilitating Faculty, Staff, Students, Parents and Alumni to access and process Academics, Research, Supporting services at one common platform.</p> -->
+
+    <div class="button-grid">
+        <div class="button student">
+            <img src="students.png" alt="Student">
+            <h3>Student</h3>
+            <a href="Studentlogin.html" class="enter-button">Enter</a>
+        </div>
+        <div class="button employee">
+            <img src="employee.png" alt="Employee">
+            <h3>Employee</h3>
+            <a href="Employeelogin.html" class="enter-button">Enter</a>
+        </div>
+        <div class="button employee">
+            <img src="alumni.png" alt="Employee">
+            <h3>Alumni</h3>
+            <a href="Alumnilogin.html" class="enter-button">Enter</a>
+        </div>
+    </div>
+
+    <div class="university">
+        VIT Bhopal University, India
+    </div>
+</div>
+
+<footer>
+    Copyright © 2024 Software Development Cell, VIT, Bhopal-466 114.
+</footer>
+
+</body>
+</html>
